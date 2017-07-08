@@ -34,4 +34,4 @@ npm install
 
 ## License
 
-[MIT](LICENSE).
+[MIT](LICENSE).# rollup-starter-lib
