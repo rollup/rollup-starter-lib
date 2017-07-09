@@ -4,7 +4,7 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var ms = _interopDefault(require('ms'));
 
-function getNextLunchtime (hours, minutes) {
+function getNextLunchtime(hours, minutes) {
 	var lunchtime = new Date();
 
 	lunchtime.setHours(hours);
@@ -23,10 +23,9 @@ function millisecondsUntil(date) {
 	return date - Date.now();
 }
 
-function howLongUntilLunch(hours, minutes) {
-	// lunch is at 12.30
-	if (hours === undefined) hours = 12;
-	if (minutes === undefined) minutes = 30;
+function howLongUntilLunch() {
+	var hours = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
+	var minutes = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 30;
 
 	var millisecondsUntilLunchTime = millisecondsUntil(getNextLunchtime(hours, minutes));
 	return ms(millisecondsUntilLunchTime, { long: true });
