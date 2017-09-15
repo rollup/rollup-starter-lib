@@ -28,7 +28,7 @@ var y = d * 365.25;
  * @api public
  */
 
-var index = function(val, options) {
+var ms = function(val, options) {
   options = options || {};
   var type = typeof val;
   if (type === 'string' && val.length > 0) {
@@ -182,7 +182,7 @@ function howLongUntilLunch(hours, minutes) {
 	if (minutes === undefined) minutes = 30;
 
 	var millisecondsUntilLunchTime = millisecondsUntil(getNextLunchtime(hours, minutes));
-	return index(millisecondsUntilLunchTime, { long: true });
+	return ms(millisecondsUntilLunchTime, { long: true });
 }
 
 return howLongUntilLunch;
