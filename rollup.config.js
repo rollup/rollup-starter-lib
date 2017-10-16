@@ -10,7 +10,7 @@ export default [
 			file: pkg.browser,
 			format: 'umd'
 		},
-		moduleName: 'howLongUntilLunch',
+		name: 'howLongUntilLunch',
 		plugins: [
 			resolve(), // so Rollup can find `ms`
 			commonjs() // so Rollup can convert `ms` to an ES module
