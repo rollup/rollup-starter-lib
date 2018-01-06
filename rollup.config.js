@@ -7,10 +7,10 @@ export default [
 	{
 		input: 'src/main.js',
 		output: {
+			name: 'howLongUntilLunch',
 			file: pkg.browser,
 			format: 'umd'
 		},
-		name: 'howLongUntilLunch',
 		plugins: [
 			resolve(), // so Rollup can find `ms`
 			commonjs() // so Rollup can convert `ms` to an ES module
