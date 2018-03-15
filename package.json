@@ -8,7 +8,7 @@
     "ms": "^2.0.0"
   },
   "devDependencies": {
-    "rollup": "^0.56.5",
+    "rollup": "^0.57.0",
     "rollup-plugin-commonjs": "^9.1.0",
     "rollup-plugin-node-resolve": "^3.0.0"
   },
