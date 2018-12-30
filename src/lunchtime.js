@@ -1,5 +1,5 @@
 export default function getNextLunchtime (hours, minutes) {
-	var lunchtime = new Date();
+	const lunchtime = new Date();
 
 	lunchtime.setHours(hours);
 	lunchtime.setMinutes(minutes);
