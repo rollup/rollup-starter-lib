@@ -1,22 +1,21 @@
 const assert = require('assert');
 const howLongTillLunch = require('..');
 
-function MockDate () {
-	this.date = 0;
-	this.hours = 0;
-	this.minutes = 0;
-	this.seconds = 0;
-	this.milliseconds = 0;
-};
+class MockDate {
+	private date = 0;
+	private hours = 0;
+	private minutes = 0;
+	private seconds = 0;
+	private milliseconds = 0;
 
-Object.assign(MockDate.prototype, {
-	getDate () { return this.date; },
-	setDate (date) { this.date = date; },
-	setHours (h) { this.hours = h; },
-	setMinutes (m) { this.minutes = m; },
-	setSeconds (s) { this.seconds = s; },
-	setMilliseconds (ms) { this.milliseconds = ms; },
-	valueOf () {
+	getDate (): number { return this.date; }
+	setDate (date: number): void { this.date = date; }
+	setHours (h: number) { this.hours = h; }
+	setMinutes (m: number): void { this.minutes = m; }
+	setSeconds (s: number): void { this.seconds = s; }
+	setMilliseconds (ms: number): void { this.milliseconds = ms; }
+	getTime (): number { return this.valueOf(); }
+	valueOf (): number {
 		return (
 			this.milliseconds +
 			this.seconds * 1e3 +
@@ -25,14 +24,15 @@ Object.assign(MockDate.prototype, {
 			this.date * 1e3 * 60 * 60 * 24
 		);
 	}
-});
+
+	static now () { return now.valueOf(); }
+}
 
 const now = new MockDate();
-MockDate.now = () => now.valueOf();
 
-global.Date = MockDate;
+global.Date = MockDate as any as typeof Date;
 
-function test(hours, minutes, seconds, expected) {
+function test(hours: number, minutes: number, seconds: number, expected: string): void {
 	now.setHours(hours);
 	now.setMinutes(minutes);
 	now.setSeconds(seconds);
