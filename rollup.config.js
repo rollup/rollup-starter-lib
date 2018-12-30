@@ -1,5 +1,6 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
+import buble from 'rollup-plugin-buble';
 import pkg from './package.json';
 
 export default [
@@ -13,7 +14,10 @@ export default [
 		},
 		plugins: [
 			resolve(), // so Rollup can find `ms`
-			commonjs() // so Rollup can convert `ms` to an ES module
+			commonjs(), // so Rollup can convert `ms` to an ES module
+			buble({  // transpile ES2015+ to ES5
+				exclude: ['node_modules/**']
+			})
 		]
 	},
 
@@ -29,6 +33,11 @@ export default [
 		output: [
 			{ file: pkg.main, format: 'cjs' },
 			{ file: pkg.module, format: 'es' }
+		],
+		plugins: [
+			buble({
+				exclude: ['node_modules/**']
+			})
 		]
 	}
 ];
