@@ -1,6 +1,6 @@
 {
   "name": "ci-demo-npm",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/how-long-till-lunch.cjs.js",
   "module": "dist/how-long-till-lunch.esm.js",
   "browser": "dist/how-long-till-lunch.umd.js",
