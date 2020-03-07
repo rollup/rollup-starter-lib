@@ -39,7 +39,9 @@ npm install
 * [buble](https://github.com/rollup/rollup-starter-lib/tree/buble) — similar, but using [Bublé](https://buble.surge.sh/) which is a faster alternative with less configuration
 * [TypeScript](https://github.com/rollup/rollup-starter-lib/tree/typescript) — uses [TypeScript](https://www.typescriptlang.org/) for type-safe code and transpiling
 
+## See also
 
+- [rollup-starter-app](https://github.com/rollup/rollup-starter-app) - Bare-bones example of how to create an application using Rollup
 
 ## License
 
