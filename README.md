@@ -7,7 +7,7 @@ This repo contains a bare-bones example of how to create a library using Rollup,
 We're creating a library called `how-long-till-lunch`, which usefully tells us how long we have to wait until lunch, using the [ms](https://github.com/zeit/ms) package:
 
 ```js
-console.log('it will be lunchtime in ' + howLongTillLunch());
+console.log('it will be lunchtime in ' + howLongUntilLunch());
 ```
 
 ## Getting started
