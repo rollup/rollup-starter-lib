@@ -17,7 +17,7 @@ console.log('it will be lunchtime in ' + howLongTillLunch());
 The easiest way to use this as a base project is to use [degit](Rich-Harris/degit)!
 
 ```bash
-npx degit https://github.com/rollup/rollup-starter-lib my-library
+npx degit rollup/rollup-starter-lib my-library
 cd my-library
 npm install
 ```
