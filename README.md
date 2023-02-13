@@ -12,6 +12,18 @@ console.log('it will be lunchtime in ' + howLongTillLunch());
 
 ## Getting started
 
+### Degit
+
+The easiest way to use this as a base project is to use [degit](Rich-Harris/degit)!
+
+```bash
+npx degit rollup/rollup-starter-lib my-library
+cd my-library
+npm install
+```
+
+### Clone
+
 Clone this repository and install its dependencies:
 
 ```bash
@@ -19,6 +31,10 @@ git clone https://github.com/rollup/rollup-starter-lib
 cd rollup-starter-lib
 npm install
 ```
+
+*Note:* this technique keeps the git history from this repository, which you probably do not want in your library.
+
+## Using rollup-starter-lib
 
 `npm run build` builds the library to `dist`, generating three files:
 
